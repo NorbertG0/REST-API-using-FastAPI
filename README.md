@@ -4,12 +4,17 @@
 - [Features](#-features)
 - [Installation](#-installation)
 - [Usage](#-usage)
-  
+
+
 ## 🚀 About
 <p align="justify">
 Lorem ipsum 
 </p>
-[database](https://www.kaggle.com/datasets/ayushparwal2026/cars-dataset?resource=download)
+
+[Database from Kaggle](https://www.kaggle.com/datasets/ayushparwal2026/cars-dataset)  
+[FastAPI documentation](https://fastapi.tiangolo.com/)  
+[MongoDB documentation](https://www.mongodb.com/docs/)
+
 ## ⚙ Features
 
 ## 🛠 Installation
