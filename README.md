@@ -79,7 +79,7 @@ Lorem ipsum
 - **Connect to your cluster from MongoDB Compass**
 - **Create new database**
 - **Create new collection**
-- **Import .csv file**
+- **Import `used_cars_data.csv` file**
 - **Get file `main.py` from repo**
 - **Install necessary python packages**
 - **Run your server / local server**
