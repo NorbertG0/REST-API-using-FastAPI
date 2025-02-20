@@ -1,4 +1,3 @@
-from pymongo import MongoClient
 from fastapi import FastAPI, HTTPException, Query
 from pydantic import BaseModel
 from bson import ObjectId
@@ -15,7 +14,7 @@ col = db['cars']
 API_KEY = "123"
 api_key_header = APIKeyHeader(name="X-API-Key")
 
-
+# Base model
 class Car(BaseModel):
     No : Optional[dict]
     Name : str
@@ -31,7 +30,7 @@ class Car(BaseModel):
     Seats : int
     Price : float
 
-
+# GET ALL
 @app.get('/cars')
 async def get_all_cars():
     cars = []
@@ -40,7 +39,7 @@ async def get_all_cars():
         cars.append(car)
     return cars
 
-
+# GET WITH PARAMS
 @app.get('/cars/search')
 async def get_info(car_id : str = Query(None),
             name : str = Query(None),
@@ -98,9 +97,24 @@ async def get_info(car_id : str = Query(None),
 
     return data
 
-
-@app.post("/cars/add")
+# POST
+@app.post('/cars/add')
 async def add_car(car: Car):
     car_dict = car.dict()
     await col.insert_one(car_dict)
     return {'message': 'Car added successfully'}
+
+# DELETE
+@app.delete('/cars/delete')
+async def delete_car(car_id: str, key: str = Query(...)):
+    if key != API_KEY:
+        raise HTTPException(status_code=403, detail="Invalid API Key")
+
+    if not ObjectId.is_valid(car_id):
+        raise HTTPException(status_code=400, detail="Invalid car ID format")
+
+    result = await col.delete_one({"_id": ObjectId(car_id)})
+    if result.deleted_count == 0:
+        raise HTTPException(status_code=404, detail="Car not found")
+
+    return {"message": "Car deleted successfully"}
