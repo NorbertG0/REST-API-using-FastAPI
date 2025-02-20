@@ -54,7 +54,7 @@ Used technologies below.
     ```sh
     http://127.0.0.1:8000/cars/add
     ```
-  + **API request using Postman**  
+  + **POST request using Postman**  
     To add an object to the database, you need to use Postman and the POST method to add it.
     <p align="center">
       <img src="https://github.com/user-attachments/assets/4453399f-0887-407a-8469-767f2421363c" />
@@ -63,16 +63,36 @@ Used technologies below.
     <p align="center">
       <img src="https://github.com/user-attachments/assets/35c3fb0f-7c8b-4216-aa3c-407459f1673b" />
     </p>
+    Response for POST request.
+    <p align="center">
+      <img src="https://github.com/user-attachments/assets/026935d9-6e6b-47e8-9e0c-e4defcf06a2e" />
+    </p>
+
     View from MongoDB Compass. Car added to the collection.
     <p align="center">
       <img src="https://github.com/user-attachments/assets/a44b881c-55c3-4631-8500-192cd00343a5" />
     </p>
     
-
-
-
-  + 
 - **DELETE METHOD**
+  + **Base endpoint**
+    ```sh
+    http://127.0.0.1:8000/cars/delete
+    ```
+  + **Endpoint with query params**
+    ```sh
+    http://127.0.0.1:8000/cars/delete?key=123&car_id=67b6fbcc3e799478e5f48a1d
+    ```
+  + **DELETE request using Postman**
+    <p align="center">
+      <img src="https://github.com/user-attachments/assets/78c35871-dedc-4f35-a20c-8ab3c969bd57" />
+    </p>
+  + Response for DELETE request.
+    <p align="center">
+      <img src="https://github.com/user-attachments/assets/3ad237b5-188d-406e-8bf2-10aa0d7a2e3a" />
+    </p>
+  
+
+
 - **PUT METHOD**
 
 
