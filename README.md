@@ -4,7 +4,6 @@
 - [About](#-about)
 - [Features](#-features)
 - [Installation](#-installation)
-- [Usage](#-usage)
 
 
 ## 🚀 About
@@ -52,12 +51,13 @@ Used technologies below.
 - **POST METHOD**
   + **Base endpoint for POST**
     ```sh
-    http://127.0.0.1:8000/cars/add
+    http://127.0.0.1:8000/cars/add?{api_key}
     ```
   + **POST request using Postman**  
     To add an object to the database, you need to use Postman and the POST method to add it.
+
     <p align="center">
-      <img src="https://github.com/user-attachments/assets/4453399f-0887-407a-8469-767f2421363c" />
+      <img src="https://github.com/user-attachments/assets/e244c776-f274-43b2-9523-3fd2e082f18e" />
     </p>
     Then, you have to create the request using JSON format.
     <p align="center">
@@ -92,8 +92,32 @@ Used technologies below.
     </p>
   
 
-
 - **PUT METHOD**
+  + **Base endpoint**
+    ```sh
+    http://127.0.0.1:8000/cars/update/{car_id}?key={api_key}
+    ```
+  + **PUT request using Postman**  
+    Document in database before uptade.
+    <p align="center">
+      <img src="https://github.com/user-attachments/assets/04c681fd-d17c-4189-86ae-3d538d6153a0" />
+    </p>
+
+    Example of endpoint for PUT request.
+    <p align="center">
+      <img src="https://github.com/user-attachments/assets/c929fa70-1f95-49b3-9fbe-2bb159b85f58" />
+    </p>
+ 
+    PUT request in Postman.
+    <p align="center">
+      <img src="https://github.com/user-attachments/assets/46ebb6e0-992e-4dc9-8c87-7db552d6392f" />
+    </p>
+ 
+    Document in database after update.
+    <p align="center">
+      <img src="https://github.com/user-attachments/assets/369cbfe7-457f-4736-a686-2bb3cd02f379" />
+    </p>
+
 
 
 ## 🛠 Installation
@@ -105,4 +129,3 @@ Used technologies below.
 - **Install necessary python packages**
 - **Run your server / local server**
 
-## ✨ Usage
