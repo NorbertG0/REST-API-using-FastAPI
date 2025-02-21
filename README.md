@@ -1,5 +1,4 @@
 # 🔗 Creating API for database using FastAPI
-# ... in progress
 ## 📑 Table of Contents
 - [About](#-about)
 - [Features](#-features)
@@ -8,8 +7,8 @@
 
 ## 🚀 About
 
-Lorem ipsum  
-Used technologies below.  
+My first created REST API using fastAPI for database from Kaggle, hosted on MongoDB.  
+Used technologies:  
 📂 [Database from Kaggle](https://www.kaggle.com/datasets/ayushparwal2026/cars-dataset)  
 💨 [FastAPI documentation](https://fastapi.tiangolo.com/)  
 🍃 [MongoDB documentation](https://www.mongodb.com/docs/) / [MongoDB Compass](https://www.mongodb.com/docs/compass/current/)  
@@ -126,6 +125,6 @@ Used technologies below.
 - **Create new collection**
 - **Import `used_cars_data.csv` file**
 - **Get file `main.py` from repo**
-- **Install necessary python packages**
+- **Install necessary python packages `requirements.txt`**
 - **Run your server / local server**
 
